@@ -1,0 +1,48 @@
+{
+	"name": "FBMicroService",
+	"version": "0.1.0",
+	"description": "MicroService for connecting your app with Facebook graph",
+	"main": "server.js",
+	"scripts": {
+		"code-style": "jscs -p google .",
+		"coverage": "lab -r html -o coverage/index.html | open coverage/index.html",
+		"jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
+		"start": "nodemon server.js",
+		"test": "lab -l",
+		"gendoc": "apidoc -i api-doc/ -o doc/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/antoniomeh/trill"
+	},
+	"author": "antoniomeh",
+	"license": "MIT",
+	"homepage": "https://github.com/antoniomeh/FBMicroService",
+	"dependencies": {
+		"argh": "0.1.4",
+		"bunyan": "1.0.1",
+		"hapi": "10.0.0",
+		"joi": "7.0.1",
+		"js-object-pick": "1.0.2",
+		"mongodb": "2.0.52",
+		"nodemon": "1.9.1",
+		"request": "2.69.0",
+		"underscore": "1.8.3"
+	},
+	"devDependencies": {
+		"api-doc": "0.15.1",
+		"code": "~1.2.0",
+		"faker": "3.0.1",
+		"lab": "~5.0.1",
+		"nock": "7.7.2",
+		"jscs": "^2.7.0",
+		"jshint": "^2.9.1-rc1",
+		"pre-commit": "1.1.2",
+		"tingodb": "0.4.2"
+	},
+	"pre-commit": [
+		"code-style",
+		"jshint",
+		"test"
+	]
+}

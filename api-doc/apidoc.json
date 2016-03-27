@@ -1,0 +1,20 @@
+{
+  "name": "FBMicroService",
+  "version": "0.0.1",
+  "description": "Create your own microservice to connect with facebook",
+  "title": "Facebook Microservice",
+  "url" : "http://www.antoniomeh.info",
+  "sampleUrl": "http://www.antoniomeh.info",
+  "header": {
+    "title": "Introducction",
+    "filename": "header.md"
+  },
+  "footer": {
+    "title": "License",
+    "filename": "footer.md"
+  },
+  "template": {
+  	"withCompare": false,
+  	"withGenerator": false
+  }
+}
