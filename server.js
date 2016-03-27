@@ -1,5 +1,4 @@
 'use strict';
-const argh = require('argh');
 const Hapi = require('hapi');
 const config = require('./config');
 const routes = require('./routes');
@@ -9,12 +8,14 @@ var log = require('bunyan').createLogger({
   name: 'Facebook Micro Service'
 });
 
-const opts = config.getConfig(argh.argv);
+const opts = config.getConfig();
 
 server.connection({
   host: opts.localhost,
   port: opts.port
 });
+
+routes(server, opts);
 
 server.start((err) => {
   if (err) {

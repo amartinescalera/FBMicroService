@@ -2,6 +2,7 @@
 
 module.exports = function(server, cfg) {
   const request = require('./request')(cfg);
+
   let routes = [
     {
       method: 'GET',

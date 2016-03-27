@@ -11,6 +11,7 @@ var defs = {
 };
 
 function getConfig(opts) {
+
   opts = opts || {};
 
   opts.port = opts.port || defs.port;
