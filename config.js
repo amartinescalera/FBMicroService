@@ -7,16 +7,7 @@ var log = require('bunyan').createLogger({
 var defs = {
   port: process.env.PORT || '3000',
   localhost: process.env.SERVER || '127.0.0.1',
-  appSecret: process.env.APP_SECRET || 'aaa',
-  mongo: process.env.MONGO || 'mongodb://127.0.0.1:27017/trillDB',
-  realMongoDB: ('true' === process.env.REAL) || false,
-  tingoDb: {
-    'path': './data',
-    'config': {
-      'nativeObjectID': true,
-      'memStore': true
-    }
-  }
+  appSecret: process.env.APP_SECRET || 'aaa'
 };
 
 function getConfig(opts) {
@@ -25,17 +16,9 @@ function getConfig(opts) {
   opts.port = opts.port || defs.port;
   opts.localhost = opts.localhost || defs.localhost;
   opts.appSecret = opts.appSecret || defs.appSecret;
-  opts.mongo = opts.mongo || defs.mongo;
-  opts.realMongoDB = opts.realMongoDB || defs.realMongoDB;
-  opts.tingoDb = defs.tingoDb;
 
   log.info('Config Option');
   log.info('Server:' + opts.localhost + ' Port:' + opts.port);
-  if (opts.realMongoDB) {
-    log.info('Using Real Database');
-  } else {
-    log.info('Using Fake Database');
-  }
 
   return opts;
 }

@@ -13,7 +13,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/antoniomeh/trill"
+		"url": "https://github.com/antoniomeh/FBMicroService"
 	},
 	"author": "antoniomeh",
 	"license": "MIT",
@@ -24,21 +24,19 @@
 		"hapi": "10.0.0",
 		"joi": "7.0.1",
 		"js-object-pick": "1.0.2",
-		"mongodb": "2.0.52",
 		"nodemon": "1.9.1",
 		"request": "2.69.0",
 		"underscore": "1.8.3"
 	},
 	"devDependencies": {
-		"api-doc": "0.15.1",
+		"api-doc": "2.0.0",
 		"code": "~1.2.0",
 		"faker": "3.0.1",
 		"lab": "~5.0.1",
 		"nock": "7.7.2",
 		"jscs": "^2.7.0",
 		"jshint": "^2.9.1-rc1",
-		"pre-commit": "1.1.2",
-		"tingodb": "0.4.2"
+		"pre-commit": "1.1.2"
 	},
 	"pre-commit": [
 		"code-style",
