@@ -6,7 +6,7 @@
 	"scripts": {
 		"code-style": "jscs -p google .",
 		"coverage": "lab -r html -o coverage/index.html | open coverage/index.html",
-		"jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
+		"jshint": "jshint -c .jshintrc .",
 		"start": "nodemon server.js",
 		"test": "lab -l",
 		"gendoc": "apidoc -i api-doc/ -o doc/"
